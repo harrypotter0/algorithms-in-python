@@ -1,2 +1,4 @@
-# codechef
-nothing much but solutions to all problems............
+# Algorithms
+
+  1. # Binary Tree
+   
