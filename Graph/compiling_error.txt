@@ -1,0 +1,12 @@
+/home/harrypotter0/Documents/awesome-algorithms/Graph/graph.cpp: In function ‘void printGraph(const Graph&)’:
+/home/harrypotter0/Documents/awesome-algorithms/Graph/graph.cpp:46:16: warning: range-based ‘for’ loops only available with -std=c++11 or -std=gnu++11
+   for (int v : graph.adjList[i])
+                ^
+/home/harrypotter0/Documents/awesome-algorithms/Graph/graph.cpp: In function ‘int main()’:
+/home/harrypotter0/Documents/awesome-algorithms/Graph/graph.cpp:60:2: error: in C++98 ‘edges’ must be initialized by constructor, not by ‘{...}’
+  };
+  ^
+/home/harrypotter0/Documents/awesome-algorithms/Graph/graph.cpp: In substitution of ‘template<class _InputIterator> std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&) [with _InputIterator = <missing>]’:
+/home/harrypotter0/Documents/awesome-algorithms/Graph/graph.cpp:60:2:   required from here
+/home/harrypotter0/Documents/awesome-algorithms/Graph/graph.cpp:60:2: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11
+/home/harrypotter0/Documents/awesome-algorithms/Graph/graph.cpp:60:2: error: could not convert ‘{{0, 1}, {1, 2}, {2, 0}, {2, 1}, {3, 2}, {4, 5}, {5, 4}}’ from ‘<brace-enclosed initializer list>’ to ‘std::vector<Edge>’
