@@ -1,18 +1,5 @@
 # Competitive-Programming
-Solution of problems on competitive programming websites
 
-- https://medium.com/coderbyte/how-to-get-good-at-algorithms-data-structures-d33d5163353f
-- https://medium.freecodecamp.com/time-is-complex-but-priceless-f0abd015063c
-- https://algo.is/t-414-aflv-competitive-programming-course-2016/
-- http://codeforces.com/blog/entry/325
-- http://codeforces.com/blog/entry/47822
-- http://codeforces.com/blog/entry/23054
-- https://medium.freecodecamp.com/data-structures-stacks-on-stacks-c25f2633c529
-- https://medium.com/the-renaissance-developer/python-101-the-basics-441136fb7cc3
-- https://www.quora.com/What-should-I-know-from-CLRS-3rd-edition-book-if-my-aim-is-to-get-into-Google/answer/Jimmy-Saade
-- https://www.topcoder.com/blog/cheat-sheet-algorithm-competitions-topcoder/
-- https://medium.freecodecamp.org/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b
-- https://www.commonlounge.com/discussion/5d2822257dfa49328d85fd27cf114441/main
 1. [Basic math](https://www.topcoder.com/community/data-science/data-science-tutorials/mathematics-for-topcoders/) 
 2. [Recursion-1](https://www.topcoder.com/community/data-science/data-science-tutorials/an-introduction-to-recursion-part-1/)
 3. [Recursion-2](https://www.topcoder.com/community/data-science/data-science-tutorials/an-introduction-to-recursion-part-2/)
@@ -38,6 +25,20 @@ Solution of problems on competitive programming websites
 22. [Computational Geometry](https://www.hackerearth.com/practice/notes/computational-geometry-i-1/)
 23. [Mo's Algorithm](https://blog.anudeep2011.com/mos-algorithm/)
 24. [Heavy Light Decomposition](https://blog.anudeep2011.com/heavy-light-decomposition)
+
+# Medium Blogs 
+- https://medium.com/coderbyte/how-to-get-good-at-algorithms-data-structures-d33d5163353f
+- https://medium.freecodecamp.com/time-is-complex-but-priceless-f0abd015063c
+- https://algo.is/t-414-aflv-competitive-programming-course-2016/
+- http://codeforces.com/blog/entry/325
+- http://codeforces.com/blog/entry/47822
+- http://codeforces.com/blog/entry/23054
+- https://medium.freecodecamp.com/data-structures-stacks-on-stacks-c25f2633c529
+- https://medium.com/the-renaissance-developer/python-101-the-basics-441136fb7cc3
+- https://www.quora.com/What-should-I-know-from-CLRS-3rd-edition-book-if-my-aim-is-to-get-into-Google/answer/Jimmy-Saade
+- https://www.topcoder.com/blog/cheat-sheet-algorithm-competitions-topcoder/
+- https://medium.freecodecamp.org/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b
+- https://www.commonlounge.com/discussion/5d2822257dfa49328d85fd27cf114441/main
 
 # Free stuff
 - https://blog.docker.com/2017/05/announcing-docker-student-developer-kit-campus-ambassador-program/
