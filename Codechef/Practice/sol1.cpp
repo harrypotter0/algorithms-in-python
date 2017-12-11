@@ -38,7 +38,6 @@ void fill(int N)
       mark[A][J]=1;
       mark[J][A]=0;
   }
-
   return ;
 }
 
@@ -89,6 +88,7 @@ int main()
     else
     mn[A]=(A/2)*(A/2)*(A/2)+((A-1)/2)*((A-1)/2)*(A/2);
   }
+  for(long long A=1;A<=1001;A++)cout<<mn[A]<<endl;
     int tc;
     cin>>tc;
     while(tc--)
@@ -99,7 +99,7 @@ int main()
       {
         cout<<"-1\n";
         continue;
-    }
+      }
     dup=N;
     while(dup>1&&tot+((dup-1)*(dup-1))+mn[dup-1]<=K)
     {
