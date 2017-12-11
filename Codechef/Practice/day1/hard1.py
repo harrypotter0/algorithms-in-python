@@ -15,4 +15,4 @@ for t in range(input()):
         d[l3[i]+1]=i+1
     for i in d:
         print d[i],
-    print 
+    print
