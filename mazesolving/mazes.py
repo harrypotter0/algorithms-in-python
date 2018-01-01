@@ -11,6 +11,7 @@ class Maze:
         height = im.size[1]
         data = list(im.getdata(0))
 
+
         self.start = None
         self.end = None
 
