@@ -16,9 +16,13 @@ class Graph:
                 self.DFSUtil(i, visited)
 
     def DFS(self,v):
-        visited = [False]*(len(self.graph))
+        V = len(self.graph)
 
-        self.DFSUtil(v,visited)
+        visited = [False]*(V)
+
+        for i in range(V):
+            if visited[i] == False:
+                self.DFSUtil(i,visited)
 
 # Driver code
 # Create a graph given in the above diagram
@@ -30,5 +34,5 @@ g.addEdge(2, 0)
 g.addEdge(2, 3)
 g.addEdge(3, 3)
 
-print "Following is DFS from (starting from vertex 2)"
-g.DFS(2)
+print "Following is Depth First Traversal"
+g.DFS()
