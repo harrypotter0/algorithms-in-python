@@ -24,6 +24,7 @@ def inorder(root):
         inorder(root.left)
         print(root.val)
         inorder(root.right)
+        
 # Driver program to test the above functions
 # Let us create the following BST
 #      50
