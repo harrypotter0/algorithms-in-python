@@ -33,6 +33,7 @@ def update_value(input, segment_tree, new_value, index):
     input[index] = new_value
     update_value_util(segment_tree, 0, len(input)-1, diff, index, 0)
 
+
 def update_value_util(segment_tree, low, high, diff, index, pos):
     if low > index or high < index:
         return
@@ -44,6 +45,36 @@ def update_value_util(segment_tree, low, high, diff, index, pos):
     update_value_util(segment_tree, low, mid, diff, index, 2*pos + 1)
     update_value_util(segment_tree, mid + 1, high, diff, index, 2*pos + 2)
 
+def updateRange(int n, int us, int ue, int diff):
+   updateRangeUtil(0, 0, n-1, us, ue, diff)
+
+lazy = [0]*1000
+
+def updateRangeUtil( si, ss, se, us, ue,  diff):
+    if (lazy[si] != 0):
+        tree[si] += (se-ss+1)*lazy[si]
+        if (ss != se):
+            lazy[si*2 + 1]   += lazy[si]
+            lazy[si*2 + 2]   += lazy[si]
+
+        lazy[si] = 0
+
+    if (ss>se || ss>ue || se<us)
+        return
+
+    if (ss>=us && se<=ue):
+        tree[si] += (se-ss+1)*diff
+
+        if (ss != se):
+            lazy[si*2 + 1]   += diff
+            lazy[si*2 + 2]   += diff
+        return
+
+    int mid = (ss+se)/2
+    updateRangeUtil(si*2+1, ss, mid, us, ue, diff)
+    updateRangeUtil(si*2+2, mid+1, se, us, ue, diff)
+
+    tree[si] = tree[si*2+1] + tree[si*2+2]
 
 def next_power_of_2(n):
     if n == 0:
@@ -65,3 +96,4 @@ if __name__ == '__main__':
     print(segment_tree)
     print(sum_range_query(segment_tree, 2, 5, len(input)))
     print(sum_range_query(segment_tree, 1, 3, len(input)))
+    updateRange(len(input), 1, 5, 10)
