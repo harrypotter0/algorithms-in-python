@@ -52,7 +52,6 @@ def next_power_of_2(n):
         return n
     while n & (n - 1) > 0:
         n &= (n - 1)
-
     return n << 1
 
 if __name__ == '__main__':
@@ -62,7 +61,7 @@ if __name__ == '__main__':
     print(sum_range_query(segment_tree, 2, 5, len(input)))
     print(sum_range_query(segment_tree, 1, 3, len(input)))
     update_value(input, segment_tree, 4, 3)
+    print(input)
+    print(segment_tree)
     print(sum_range_query(segment_tree, 2, 5, len(input)))
     print(sum_range_query(segment_tree, 1, 3, len(input)))
-
-
