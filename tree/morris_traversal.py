@@ -1,10 +1,5 @@
 """Morris Traversal of a Binary Tree.
 
-Video
------
-
-* https://youtu.be/wGXB9OWhPTg
-
 Analysis
 --------
 

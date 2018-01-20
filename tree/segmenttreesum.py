@@ -45,36 +45,13 @@ def update_value_util(segment_tree, low, high, diff, index, pos):
     update_value_util(segment_tree, low, mid, diff, index, 2*pos + 1)
     update_value_util(segment_tree, mid + 1, high, diff, index, 2*pos + 2)
 
-def updateRange(int n, int us, int ue, int diff):
-   updateRangeUtil(0, 0, n-1, us, ue, diff)
+def updateSegmentTreeRangeLazy( input, segmentTree, lazy, startRange, endRange, delta):
+    updateSegmentTreeRangeLazy(segmentTree, lazy, startRange, endRange, delta, 0, input.length - 1, 0)
 
-lazy = [0]*1000
 
-def updateRangeUtil( si, ss, se, us, ue,  diff):
-    if (lazy[si] != 0):
-        tree[si] += (se-ss+1)*lazy[si]
-        if (ss != se):
-            lazy[si*2 + 1]   += lazy[si]
-            lazy[si*2 + 2]   += lazy[si]
+def rangeMinimumQueryLazy(segmentTree, lazy, qlow, qhigh, leni):
+    return rangeMinimumQueryLazy(segmentTree, lazy, qlow, qhigh, 0, leni - 1, 0)
 
-        lazy[si] = 0
-
-    if (ss>se || ss>ue || se<us)
-        return
-
-    if (ss>=us && se<=ue):
-        tree[si] += (se-ss+1)*diff
-
-        if (ss != se):
-            lazy[si*2 + 1]   += diff
-            lazy[si*2 + 2]   += diff
-        return
-
-    int mid = (ss+se)/2
-    updateRangeUtil(si*2+1, ss, mid, us, ue, diff)
-    updateRangeUtil(si*2+2, mid+1, se, us, ue, diff)
-
-    tree[si] = tree[si*2+1] + tree[si*2+2]
 
 def next_power_of_2(n):
     if n == 0:
@@ -84,6 +61,57 @@ def next_power_of_2(n):
     while n & (n - 1) > 0:
         n &= (n - 1)
     return n << 1
+
+def updateSegmentTreeRangeLazy(segmentTree, lazy, startRange, endRange, delta, low, high, pos):
+        if(low > high):
+            return
+
+        if (lazy[pos] != 0):
+            segmentTree[pos] += lazy[pos]
+            if (low != high):
+                lazy[2 * pos + 1] += lazy[pos]
+                lazy[2 * pos + 2] += lazy[pos]
+            lazy[pos] = 0
+
+        if(startRange > high || endRange < low):
+            return
+
+        if(startRange <= low && endRange >= high):
+            segmentTree[pos] += delta
+            if(low != high):
+                lazy[2*pos + 1] += delta
+                lazy[2*pos + 2] += delta
+            return
+
+        int mid = (low + high)/2
+        updateSegmentTreeRangeLazy(segmentTree, lazy, startRange, endRange,delta, low, mid, 2*pos+1)
+        updateSegmentTreeRangeLazy(segmentTree, lazy, startRange, endRange,delta, mid+1, high, 2*pos+2)
+        segmentTree[pos] = Math.min(segmentTree[2*pos + 1], segmentTree[2*pos + 2])
+
+def rangeMinimumQueryLazy(int segmentTree, int lazy[], int qlow, int qhigh, low, int high, int pos):
+    if(low > high):
+        return Integer.MAX_VALUE
+
+    if (lazy[pos] != 0)
+        segmentTree[pos] += lazy[pos]
+        if (low != high):
+            lazy[2 * pos + 1] += lazy[pos]
+            lazy[2 * pos + 2] += lazy[pos]
+        lazy[pos] = 0
+
+    if(qlow > high || qhigh < low):
+        return Integer.MAX_VALUE
+
+    if(qlow <= low && qhigh >= high):
+        return segmentTree[pos]
+
+    int mid = (low+high)/2
+    return Math.min(rangeMinimumQueryLazy(segmentTree, lazy, qlow, qhigh,
+                    low, mid, 2 * pos + 1),
+            rangeMinimumQueryLazy(segmentTree, lazy,  qlow, qhigh,
+                    mid + 1, high, 2 * pos + 2))
+
+
 
 if __name__ == '__main__':
     input = [1,3,5,7,9,11]
@@ -97,3 +125,11 @@ if __name__ == '__main__':
     print(sum_range_query(segment_tree, 2, 5, len(input)))
     print(sum_range_query(segment_tree, 1, 3, len(input)))
     updateRange(len(input), 1, 5, 10)
+
+    #lazy propagation example
+    input1 = [-1,2,4,1,7,1,3,2]
+    segTree1 = create_segment_tree(input)
+    lazy1 = []
+    updateSegmentTreeRangeLazy(input1, segTree1, lazy1, 0, 3, 1)
+    updateSegmentTreeRangeLazy(input1, segTree1, lazy1, 0, 0, 2)
+    print(1 == rangeMinimumQueryLazy(segTree1, lazy1, 3, 5, input1.length))
