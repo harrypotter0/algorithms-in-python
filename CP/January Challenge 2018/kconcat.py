@@ -1,29 +1,43 @@
-'''
-listB.sort(reverse=True) # listB gets modified
-listC = sorted(listB, reverse=True) # listB remains untouched
-'''
+int_min = -float('inf')
 
+def kadane(a , k):
+    n = len(a)
+    temp = 0
+    maxm = int_min
+    while k :
+        k -= 1
 
-for _ in range(int(input())):
-    n = int(input())
-    b = []
-    for __ in range(n):
-        a = map(int,raw_input().split())
-        b.append(sorted(a))
-    su = b[n-1][-1]
-    k1=su
+        for i in range(n):
+            temp += a[i]
+            if temp > maxm :
+                maxm = temp
 
-    for x in range(n-2,-1,-1):
-        flag = 0
-        for y in range(n-1,-1,-1):
-            if(b[x][y]<k1):
-                k1=b[x][y]
-                su+=k1
-                flag = 1
-                break
-        if(flag == 0):
-            break
-    if(flag == 0):
-        print("-1")
+            if temp < 0 :
+                temp = 0
+
+    return maxm
+
+t = int(raw_input())
+for a0 in range(t):
+    n,k = map(int , raw_input().split())
+    arr = map(int , raw_input().split())
+
+    sumi = 0
+    maxi = -float('inf')
+
+    s1 = kadane(arr , 1)
+    s2 = kadane(arr , 2)
+    s3 = kadane(arr , 3)
+    s4 = kadane(arr , 4)
+
+    if s1 == s2 :
+        print s1
     else :
-        print(su)
+        if k == 1 :
+            print s1
+        elif k == 2:
+            print s2
+        elif k == 3 :
+            print s3
+        else :
+            print s3 + (k-3)*(s4-s3)
