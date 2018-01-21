@@ -22,10 +22,12 @@ def max_value_contigous_subsequence(arr):
     for i in range(1, len(arr)):
         A[i] = max(arr[i], arr[i] + A[i-1])
         max_to_here = max(max_to_here, A[i])
+        #print(arr[i],max_to_here,arr[i] + A[i-1])
     return max_to_here
 
 if __name__ == "__main__":
     x = [-2, -3, 4, -1, -2, 1, 5, -3]
     y = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
     z = [-1, 3, -5, 4, 6, -1, 2, -7, 13, -3]
-    print map(max_value_contigous_subsequence, [x, y, z])
+    print(max_value_contigous_subsequence(x))
+    #print map(max_value_contigous_subsequence, [x, y, z])
