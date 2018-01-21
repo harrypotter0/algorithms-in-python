@@ -5,10 +5,6 @@ Problem Statement
 Given two sequences A = [A1, A2, A3,..., An] and B = [B1, B2, B3,..., Bm], find the length of the longest common
 substring.
 
-Video
------
-
-* https://youtu.be/BysNXJHzCEs
 
 Complexity
 ----------
@@ -77,4 +73,3 @@ if __name__ == '__main__':
     str2 = "zcdemf"
     expected = 3
     assert expected == longest_common_substring(str1, str2)
-
