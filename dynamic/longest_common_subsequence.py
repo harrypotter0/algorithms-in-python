@@ -5,11 +5,6 @@ Problem Statement
 Given two sequences A = [A1, A2, A3,..., An] and B = [B1, B2, B3,..., Bm], find the length of the longest common
 subsequence.
 
-Video
------
-
-* https://youtu.be/NnD96abizww
-
 Complexity
 ----------
 
