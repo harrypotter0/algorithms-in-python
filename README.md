@@ -2,71 +2,37 @@
 
 This is just a collection of algorithms I wanted to implement in order to improve my understanding. They are NOT optimized and probably shouldn't be used in production code.
 
+Here is the complete list ::
 
-To run all unit tests:
+## DP 
 
-    python3 -m unittest discover test
+## Geometry
 
+## Trees
 
-## quicksort
+## Union_find
 
-Recursive implementation of the quick sort algorithm.
+## String
 
-To run tests:
+## Recursion
 
-    python3 quicksort.py
+## Sorting and Basics
 
+## Arrays
 
-## mergesort
+## Graphs
 
-Recursive implementation of the merge sort algorithm.
+## Testing 
 
-To run tests:
+## Heaps 
 
-    python3 mergesort.py
+## CP 
 
+## Data-Structures
 
-## hashtable
+## Lists
 
-Simple hashtable implementation
-
-
-## autoresizelist
-
-A helper class used to implement the heap.
-
-To run tests:
-
-    python3 autoresizelist.py
+## Miscellaneous
 
 
-## heap
-
-Implementation of a heap.
-
-To run tests:
-
-    python3 heap.py
-
-
-## nqueens
-
-Backtracking solution to the n-queens problem (just finds the first one).
-
-To run:
-
-    python3 nqueens.py
-
-To run tests:
-
-    python3 -m unittest discover test --pattern="*nqueens*"
-
-
-## combinatorics
-
-Various combinatoric functions like permutations and combinations.
-
-To run:
-
-    python3 combinatorics.py
 
