@@ -13,8 +13,8 @@ bool ok(int i)
 int N;
 int ans()
 {
-	int i = (N + 1) / 2;cout<<i<<"::i's value";
-	int j = (N + 2) / 2;cout<<j<<"::j's value";
+	int i = (N + 1) / 2;
+	int j = (N + 2) / 2;
 	int id = 0;
 	D1[id] = N + 2;
 	D2[id] = N + 2;
@@ -27,12 +27,10 @@ int ans()
 	{
 		if (ok(i))
 			D1[id] = 0;
-		cout<<A[i]<<"::A[i]'s value"<<A[j]<<"::A[j]'s value";
 		swap(A[i], A[j]);
 		if (ok(i))
 			D2[id] = 1;
 		swap(A[i], A[j]);
-		cout<<D1[id]<<"1id"<<" "<<D2[id]<<"2id";
 	}
 	while (true)
 	{
@@ -44,20 +42,28 @@ int ans()
 		D1[id] = N + 2;
 		D2[id] = N + 2;
 		{
-			if (ok(i) && ok(j - 1))
+			if (ok(i) && ok(j - 1)){
 				D1[id] = min(D1[id], D1[id - 1]);
+		//		cout<<"Value D1 "<<D1[id]<<i<<" "<<j<<endl;
+			}
 			swap(A[i + 1], A[j - 1]);
-			if (ok(i) && ok(j - 1))
+			if (ok(i) && ok(j - 1)){
 				D1[id] = min(D1[id], D2[id - 1]);
+		//		cout<<"Value D1 "<<D1[id]<<i<<" "<<j<<endl;
+			}
 			swap(A[i + 1], A[j - 1]);
 		}
 		swap(A[i], A[j]);
 		{
-			if (ok(i) && ok(j - 1))
+			if (ok(i) && ok(j - 1)){
 				D2[id] = min(D2[id], 1 + D1[id - 1]);
+			//	cout<<"Value D2 "<<D2[id]<<i<<" "<<j<<endl;
+			}
 			swap(A[i + 1], A[j - 1]);
-			if (ok(i) && ok(j - 1))
+			if (ok(i) && ok(j - 1)){
 				D2[id] = min(D2[id], 1 + D2[id - 1]);
+		//		cout<<"Value D2 "<<D2[id]<<i<<" "<<j<<endl;
+			}
 			swap(A[i + 1], A[j - 1]);
 		}
 		swap(A[i], A[j]);
