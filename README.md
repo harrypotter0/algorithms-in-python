@@ -4,35 +4,33 @@ This is just a collection of algorithms I wanted to implement in order to improv
 
 Here is the complete list ::
 
-## DP 
 
-## Geometry
+1. [CP](https://github.com/harrypotter0/algorithms-in-python/tree/master/CP)
 
-## Trees
+2. [TREES](https://github.com/harrypotter0/algorithms-in-python/tree/master/tree)
 
-## Union_find
+3. [STRINGS](https://github.com/harrypotter0/algorithms-in-python/tree/master/string)
 
-## String
+4. [RECURSION](https://github.com/harrypotter0/algorithms-in-python/tree/master/recursion)
 
-## Recursion
+5. [ARRAY](https://github.com/harrypotter0/algorithms-in-python/tree/master/array)
 
-## Sorting and Basics
+6. [DP](https://github.com/harrypotter0/algorithms-in-python/tree/master/dynamic)
 
-## Arrays
+7. [GEOMETRY](https://github.com/harrypotter0/algorithms-in-python/tree/master/geometry)
 
-## Graphs
+8. [GRAPH](https://github.com/harrypotter0/algorithms-in-python/tree/master/graph)
 
-## Testing 
+9. [HEAPS](https://github.com/harrypotter0/algorithms-in-python/tree/master/heaps)
 
-## Heaps 
+10. [LISTS](https://github.com/harrypotter0/algorithms-in-python/tree/master/lists)
 
-## CP 
+11. [DATA-STRUCTURES](#)
 
-## Data-Structures
+12. [UNION-FIND](https://github.com/harrypotter0/algorithms-in-python/tree/master/union_find)
 
-## Lists
+13. [SORTING AND BASICS](https://github.com/harrypotter0/algorithms-in-python/tree/master/sorting%20and%20basics)
 
-## Miscellaneous
-
+14. [MISC](https://github.com/harrypotter0/algorithms-in-python/tree/master/misc)
 
 
