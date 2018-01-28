@@ -1,5 +1,3 @@
-// Still unsolved What the fuck !
-
 #include <bits/stdc++.h>
 using namespace std;
 

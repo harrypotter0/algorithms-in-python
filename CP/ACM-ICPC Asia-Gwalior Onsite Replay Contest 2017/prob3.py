@@ -9,7 +9,7 @@ for a0 in xrange(t):
         for i in xrange(3):
             b[i]+=abs(m)
     [x1,x2,x3]=sorted(b)
-    if (k >= (x3-x1)/2):
+    if (k >= (x3-x1)/2):  # k is the move we can take
         print float(a*a)
     else:
         if x3-x1-2*k>a: print float(0)
