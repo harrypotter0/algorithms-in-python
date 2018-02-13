@@ -1,29 +1,36 @@
-import re
-for _ in range(int(input())):
-    n,m,x,k= map(int,raw_input().split())
-    string = raw_input()
-    oddp,evenp = 0,0
-    for i in range(int(len(string))):
-        if(string[i]=='O'):
-            oddp+=1
-        else:
-            evenp+=1
-    if(m*x<n or n>k):
-        print("no")
-        continue
-    # if(m==1 and not(re.search('O',string))):
-    #     print("no")
-    #     continue
-    # # print(re.search('O',string))
-    evenpm = m/2
-    oddpm = m%2 + m/2
-    evenp = (evenp/x)*x
-    oddp = (oddp/x)*x
-    e = min(evenp,evenpm*x)
-    o = min(oddp,oddpm*x)
-    # print(evenp,evenpm,oddp,oddpm,e,o)
-    summ = e+o
-    if(summ>=n):
-        print("yes")
-    else :
-        print("no")
+def inp(): return input()
+
+def inpv(): return [int(x) for x in raw_input().split()]
+
+MOD = 10 ** 9 + 7
+
+def chefptnt():
+    for _ in range(input()):
+        n, m, x, k = map(int,raw_input().split())
+        s = raw_input().strip()
+        ev = 0
+        for c in s: ev += c == 'E'
+        odd = len(s) - ev
+        mx = 0
+        for i in range(1,m+1):
+            if i & 1:
+                v = min(odd, x)
+                odd -= v
+            else:
+                v = min(ev, x)
+                ev -= v
+            mx += v
+        print 'yes' if mx >= n else 'no'
+
+chefptnt()
+
+
+'''
+3
+4 4 2 4
+EEOO
+4 3 1 4
+EEOO
+6 4 2 6
+EEEOOO
+'''
