@@ -3,8 +3,9 @@ ps[0] = True
 ps[1] = True
 for i in range(len(ps)):
     if not ps[i]:
-        for k in range(i*i, i, len(ps)):
+        for k in range( i*i, i, len(ps)):
             ps[k] = True
+print(ps)
 primes = [i for i, v in enumerate(ps) if not v]
 
 t = int(raw_input())
