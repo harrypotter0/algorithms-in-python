@@ -1,31 +1,20 @@
-n = int(input())
-arr = map(int,raw_input().split())
-a=[]
-f=0
-j=0
-for i in range(0,n):
-    vec = arr[i]
-    while j<n and vec!=n:
-        if(arr[i] in a):
-            # print(a)
-            f=1
-            break
-        if(vec!=arr[vec-1]):
-            vec=arr[vec-1]
-        a.append(vec)
-        j+=1
-    print(a)
-    if(f and len(a)==3): break
-    del a[:]
+def readInts():
+    return map(int, input().split())
+def readInt():
+    return int(input())
+def readIntsindex0():
+    return list(map(lambda x: int(x) - 1, input().split()))
 
-# del lst[:]
+n = readInt()
+a = readIntsindex0()
+ans = False
 
-# print(a)
-if(f and len(a)==3):
-     print("YES")
-else:
-     print("NO")
+for i in range(n):
+    if a[a[a[i]]] == i:
+        ans = True
+        break
 
+print('YES' if ans else 'NO')
 
 '''
 5
