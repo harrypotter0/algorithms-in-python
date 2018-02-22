@@ -45,6 +45,9 @@ int main(){
       adj[n+i].push_back(neg(i));
       adj[i].push_back(neg(n+i));
     }
+    for(i=1;i<=n;i++){
+      cout<<adj[i]<<" ";
+    }
     for(i=1;i<=m;i++){
       scanf("%d%d",&a,&b);
       adj[neg(a)].push_back(b);
