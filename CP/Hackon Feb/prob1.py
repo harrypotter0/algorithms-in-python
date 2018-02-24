@@ -1,12 +1,12 @@
-import math
 def readInts():
-    return list(map(int, raw_input().split()))
+    return list(map(int, input().split()))
 def readInt():
     return int(input())
 def readIntsindex0():
     return list(map(lambda x: int(x) - 1, input().split()))
-def readStr():
-    return raw_input()
 
-for __ in range(readInt()):
+t=input()
+for __ in range(t):
     n = readInt()
+    a = n//7
+    print(7*(a*(a+1)//2))
