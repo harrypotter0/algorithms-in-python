@@ -20,5 +20,5 @@ while t>0:
     e = (2*n+2)
     num = (a*b)/2+d/4-(e*c)/6
     den = (a*n)+c/6-(e*b)/2
-    print(num,den)
+    # print(num,den)
     print num/den
