@@ -10,6 +10,25 @@ def readStrs():
 def readStr():
     return raw_input()
 
+a = readStr()
+n = len(a)
+c=0
+a = list(a)
+for i in range(n/2):
+    if(a[i]==a[n-i-1]):
+        continue
+    elif(a[i]<a[n-i-1]):
+        c+=1
+        a[n-i-1] = a[i]
+    else:
+        c+=1
 
-for __ in range(readInt()):
-    arr = readInts()
+        a[i] = a[n-i-1]
+print(c)
+print(''.join(a))
+
+'''
+abc
+
+ewgfdshagsdgbgrfdszvcxgrasdv
+'''
