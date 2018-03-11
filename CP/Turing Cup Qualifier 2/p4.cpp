@@ -44,4 +44,4 @@ void deal(){
 }
 int main() {
   deal();
-}     
+}

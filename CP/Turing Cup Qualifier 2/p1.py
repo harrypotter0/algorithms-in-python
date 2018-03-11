@@ -15,8 +15,12 @@ for __ in range(readInt()):
     a,b = readInts()
     arr = readInts()
     brr = readInts()
-    win = 0 if(a>b) else: 1
-    print(winner)
+    if(a>b):
+        win = 0
+    else:
+        win = 1
+    # win = if(a>b):0 else:1
+    # print(win)
     c= [0 ,0]
     for i in range(len(arr)):
         if(arr[i]&1):
@@ -24,7 +28,7 @@ for __ in range(readInt()):
     for i in range(len(brr)):
         if(brr[i]&1):
             c[1]+=1
-    print(c[0],c[1])
+    # print(c[0],c[1])
     if(c[win]>=c[(win+1)%2]):
         print("alan")
     else:
