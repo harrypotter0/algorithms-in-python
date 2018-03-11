@@ -8,29 +8,21 @@ def readIntsindex0():
 def readStr():
     return raw_input()
 
-
 for __ in range(readInt()):
     n,h = readInts()
     a = readInts()
     a = sorted(a)
-    print(a)
-    # summ = 0
-    # for i in range(n):
-    #     summ+= a[i]
     diff = h-n
     if(n==h):
         print(a[n-1])
         continue
     for i in range(diff):
-        print("yeh waala hai ", a[n+i-1])
         if(a[n+i-1]/2<=1):
             break
         j = a[n+i-1]/2
         a[n+i-1] -= j
         a.append(j)
         a = sorted(a)
-        print(a)
-    # di = i
     print(int(a[n+i]))
 
 
