@@ -37,3 +37,16 @@ def permute(word):
 
 for __ in range(readInt()):
     n,k = readInts()
+
+'''
+Input:
+2
+2
+1 2
+3
+1 2 3
+
+Output:
+33
+1332
+'''

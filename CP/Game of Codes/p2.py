@@ -1,8 +1,8 @@
-# Akash Kandpal
-# My Domain => http://harrypotter.tech/
-from fractions import gcd
+
 import math
+from fractions import gcd
 from itertools import permutations
+from itertools import combinations
 
 def readInts():
     return list(map(int, raw_input().strip().split()))
@@ -37,3 +37,28 @@ def permute(word):
 
 for __ in range(readInt()):
     n,k = readInts()
+    a = []
+    for i in range(n+1):
+        a.append(i)
+    # print a
+    comb = combinations(a, k)
+    s= 0
+    for i in list(comb):
+        # print i
+        if(sum(i)==n):
+            s+=1
+            # print(i)
+    print 2*s
+
+
+'''
+Input:
+2
+3 2
+5 2
+
+Output:
+4
+6
+
+'''

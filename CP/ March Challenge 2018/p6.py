@@ -35,5 +35,48 @@ def permute(word):
     # print perms
     return set(perms)
 
-for __ in range(readInt()):
-    n,k = readInts()
+a = readInt()
+while(a):
+    a-=1
+    b=input()
+    c=readInts()
+    w=[0]*b
+    for i in range(b):
+        s=0
+        j=i+1
+        while(s<=c[i] and j<b):
+            if(s<=c[i]):
+                w[j]+=1
+                s+=c[j]
+                j+=1
+            else:
+                break
+        s=0
+        j=i-1
+        while(s<=c[i] and j>-1):
+            if(s<=c[i]):
+                w[j]+=1
+                s+=c[j]
+                j-=1
+            else:
+                break
+    for i in range(b):
+        print w[i],
+    print
+
+
+'''
+Input:
+
+2
+4
+4 3 2 1
+5
+1 2 2 3 1
+
+Output:
+
+1 2 3 2
+2 3 2 3 1
+
+'''

@@ -35,5 +35,21 @@ def permute(word):
     # print perms
     return set(perms)
 
-for __ in range(readInt()):
-    n,k = readInts()
+n = readInt()
+a = [4,6,8]
+
+for i in range(4,n+1):
+    c= (i/2-1)*2+i/2
+    if(i%2==1):
+        c+=1
+    # print c
+    a.append(4*i-2*c)
+# print a
+print a[n-1]
+
+
+
+
+'''
+2
+'''

@@ -23,9 +23,14 @@ int main() {
   while(t--)
     {
       ll n,k;
-      cin>>
-
+      cin>>n>>k;
+      if(n==0||n==1||n<0)
+        {cout<<"0"<<endl;}
+      else
+      {ll d=(n-1)*k;
+      long double r= (d*3)/50.0;
+      cout<<r<<endl;}
     }
 
-return 0;
+
 }

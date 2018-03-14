@@ -9,29 +9,39 @@ def readStr():
     return raw_input()
 
 
-for __ in range(readInt()):
-    n,h = readInts()
-    a = readInts()
-    a = sorted(a)
-    print(a)
-    # summ = 0
-    # for i in range(n):
-    #     summ+= a[i]
-    diff = h-n
-    if(n==h):
-        print(a[n-1])
-        continue
-    for i in range(diff):
-        print("yeh waala hai ", a[n+i-1])
-        if(a[n+i-1]/2<=1):
-            break
-        j = a[n+i-1]/2
-        a[n+i-1] -= j
-        a.append(j)
-        a = sorted(a)
-        print(a)
-    # di = i
-    print(int(a[n+i]))
+for m in range(readInt()):
+    strings = raw_input().split(" ")
+    N= int(strings[0])
+    H= int(strings[1])
+    strings1=raw_input().split(" ")
+    A= map(int, strings1)
+    maxi = A[0]
+    sumi = 0
+    for i in range(len(A)):
+        sumi += A[i]
+        if(maxi < A[i]):
+            maxi = A[i]
+    flag=True
+    #suitable values of K
+    avg = sumi/H
+    low = avg
+    high = maxi
+    #######################################3
+    hr = 0
+    while(low<=high):
+        mid = (low+high)/2
+        hr = 0
+        for j in range(len(A)):
+            if( A[j]%mid != 0):
+                hr += A[j]/mid + 1
+            else:
+                hr += A[j]/mid
+        if(hr <= H):
+            ans = mid
+            high = mid - 1
+        else:
+            low = mid  + 1
+    print ans
 
 
 '''

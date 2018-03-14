@@ -35,5 +35,24 @@ def permute(word):
     # print perms
     return set(perms)
 
+arr = []
 for __ in range(readInt()):
-    n,k = readInts()
+    stri = readStr()
+    a = []
+    for i in stri:
+        if(ord(i)>96):
+            a +=chr(27-(ord(i)-96)+96)
+        else:
+            # print ord(i)
+            a +=chr(27-(ord(i)-64)+64)
+    # print a
+    print(strlistTostr(a))
+
+'''
+5
+aaaaaa
+axycd
+dasafdssfsa
+abcdefghijklmnopqrstuvwxyz
+ABCas
+'''
