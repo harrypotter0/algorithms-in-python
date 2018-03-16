@@ -19,7 +19,7 @@ int main() {
 	#ifdef JUDGE
     freopen("input.txt", "rt", stdin);
     freopen("output.txt", "wt", stdout);
-    #endif
+  #endif
 	ios_base::sync_with_stdio(0);
 	cin.tie(NULL);
 	cout.tie(NULL);

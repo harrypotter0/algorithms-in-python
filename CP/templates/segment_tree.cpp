@@ -3,6 +3,7 @@
 // King is set for the hunt
 // Best is the enemy of Good
 
+
 #include <bits/stdc++.h>
 using namespace std;
 #define mod 1000000007

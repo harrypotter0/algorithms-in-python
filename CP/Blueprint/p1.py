@@ -1,9 +1,9 @@
 # Akash Kandpal
 # My Domain => http://harrypotter.tech/
-# from fractions import gcd
+from fractions import gcd
 import math
-# from itertools import permutations
-# import statistics
+from itertools import permutations
+import statistics
 
 def readInts():
     return list(map(int, raw_input().strip().split()))

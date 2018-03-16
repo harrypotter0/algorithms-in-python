@@ -12,11 +12,11 @@ for kohli in range(input()):
     # print(x,y)
     for i in range(n):
         yy.append([y[i],i])
-    # print(yy)
+    print(yy)
     yy.sort(key = lambda x:x[0])
-    # print(yy)
+    print(yy)
     yy = yy[::-1]
-    # print(yy)
+    print(yy)
     for i in yy:
         if(len(ans)==3):
             break

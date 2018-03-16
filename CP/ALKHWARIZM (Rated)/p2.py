@@ -43,5 +43,36 @@ def reversepair(yy):
 
 MOD = 10 ** 9 + 7
 
-for __ in range(readInt()):
-    n,k = readInts()
+# for __ in range(readInt()):
+n = readInt()
+arr = readInts()
+arr =sorted(arr)
+mini = min(arr)
+maxi = max(arr)
+sum = 0
+
+for i in range(n-1):
+    # print arr[i],arr[i+1]
+    sum+=arr[i]*arr[i+1]
+
+print sum
+
+
+'''
+Input:
+2
+4 5
+
+6
+1 3 6 5 8 4
+
+5
+7 9 10 4 2
+
+4
+1 210 23 327
+
+6
+1 23 2 33242 2423 4232
+
+'''

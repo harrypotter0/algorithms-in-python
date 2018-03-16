@@ -44,4 +44,17 @@ def reversepair(yy):
 MOD = 10 ** 9 + 7
 
 for __ in range(readInt()):
-    n,k = readInts()
+    n,m = readInts()
+    ans = m*(2*m+1)*(2*m-1)/3
+    # print ans
+    ans -= n*(2*n+1)*(2*n-1)/3
+    print ans % MOD
+
+'''
+Input:
+1
+1 4
+
+Output:
+83
+'''

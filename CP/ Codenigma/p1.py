@@ -44,4 +44,25 @@ def reversepair(yy):
 MOD = 10 ** 9 + 7
 
 for __ in range(readInt()):
-    n,k = readInts()
+    n = readInt()
+    # maxi = -1e9
+    # for i in range(n+1):
+    #     for j in range(n+1):
+    #         # print i,j
+    #         if(abs(i**2-j**2)==n):
+    #             print i,j
+    #             maxi = max(maxi,i+j)
+    # print maxi
+    print n
+
+'''
+Input:
+3
+1
+7
+35
+
+Output:
+1
+
+'''

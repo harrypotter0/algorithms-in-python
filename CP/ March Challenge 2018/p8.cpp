@@ -46,7 +46,23 @@ int gcd(int a, int b) {
   }
   return a;
 }
+/*
+Input
 
+5
+1 2 3
+2 3 4
+2 4 6
+3 5 5
+
+Output
+
+0 0
+4 0
+4 5
+10 -10
+10 10
+*/
 int main() {
   // your code goes here
   #ifdef JUDGE
