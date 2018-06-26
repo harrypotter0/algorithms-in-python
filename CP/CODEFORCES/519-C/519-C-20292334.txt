@@ -1,0 +1,5 @@
+<?php
+	list($a,$b) = explode(' ',trim(fgets(STDIN)));
+	if ($a > $b) list($a,$b) = array($b,$a);
+	echo floor(($a + min($b,$a*2))/3);
+?>

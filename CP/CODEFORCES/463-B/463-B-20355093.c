@@ -1,0 +1,1 @@
+p,m;main(n){scanf("%d",&n);while(n--){scanf("%d",&p);m=m<p?p:m;}printf("%d",m);return 0;}

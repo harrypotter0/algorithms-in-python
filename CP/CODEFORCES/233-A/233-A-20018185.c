@@ -1,0 +1,1 @@
+n;main(){scanf("%d",&n);n%2?puts("-1"):({while(n)printf("%d ",n--);});}
