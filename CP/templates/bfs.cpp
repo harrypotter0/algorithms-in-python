@@ -3,6 +3,7 @@
 #include <vector>
 #include <queue>
 #include <cassert>
+<<<<<<< HEAD
 #define d0(x) cout<<x<<" "
 #define d1(x) cout<<x<<"\n"
 #define d2(x,y) cout<<x<<" "<<y<<"\n"
@@ -45,6 +46,12 @@ void solve() {
     freopen("output.txt", "wt", stdout);
   #endif
 
+=======
+
+using namespace std;
+
+void solve() {
+>>>>>>> 9d8ab08713e8d381ae7bbc68c6a68de0144cef8d
   int n, m, s, e;
   cin >> n >> m >> s >> e;
 
