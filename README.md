@@ -2,7 +2,7 @@
 
 This is just a collection of algorithms I wanted to implement in order to improve my understanding. They are NOT optimized and probably shouldn't be used in production code.
 
-Here is the complete list ::
+Here is the complete list of algorithms here::
 
 
 1. [CP](https://github.com/harrypotter0/algorithms-in-python/tree/master/CP)
